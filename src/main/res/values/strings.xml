@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">TableFiveOnFive</string>
+
+    <string-array name="choices">
+        <item>Арабские цифры</item>
+        <item>Римские цифры</item>
+        <item>Русские буквы</item>
+        <item>Английские буквы</item>
+    </string-array>
+
+    <string-array name="mixing">
+        <item>Да</item>
+        <item>Нет</item>
+    </string-array>
+
+    <string-array name="sizeoftable">
+        <item>4 X 4</item>
+        <item>5 X 5</item>
+        <item>6 X 6</item>
+        <item>7 X 7</item>
+    </string-array>
+
 </resources>
+

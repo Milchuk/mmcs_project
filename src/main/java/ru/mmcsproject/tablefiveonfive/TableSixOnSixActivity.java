@@ -13,12 +13,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MainActivity extends AppCompatActivity {
+public class TableSixOnSixActivity extends AppCompatActivity {
 
     private Chronometer mChronometer;
     private Button mButton;
     private TextView mTextView;
-    private Button[] buttons = new Button[25];
+    private Button[] buttons = new Button[36];
     private int k = 1;
     long StartTime;
     private String value;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_table_six_on_six);
         mButton = findViewById(R.id.button26);
         mTextView = findViewById(R.id.textView);
         mChronometer = findViewById(R.id.chronometer);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onCLick5(View view) {
+    public void onCLick6(View view) {
         k = 1;
         buttons[0] = findViewById(R.id.button);
         buttons[1] = findViewById(R.id.button2);
@@ -69,21 +69,33 @@ public class MainActivity extends AppCompatActivity {
         buttons[22] = findViewById(R.id.button23);
         buttons[23] = findViewById(R.id.button24);
         buttons[24] = findViewById(R.id.button25);
+        buttons[25] = findViewById(R.id.button37);
+        buttons[26] = findViewById(R.id.button27);
+        buttons[27] = findViewById(R.id.button28);
+        buttons[28] = findViewById(R.id.button29);
+        buttons[29] = findViewById(R.id.button30);
+        buttons[30] = findViewById(R.id.button31);
+        buttons[31] = findViewById(R.id.button32);
+        buttons[32] = findViewById(R.id.button33);
+        buttons[33] = findViewById(R.id.button34);
+        buttons[34] = findViewById(R.id.button35);
+        buttons[35] = findViewById(R.id.button36);
 
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 36; i++) {
             buttons[i].setVisibility(View.VISIBLE);
         }
+
         mTextView.setVisibility(View.VISIBLE);
         mChronometer.setVisibility(View.VISIBLE);
 
         list = new ArrayList<>();
-        for (int i = 1; i < 26; i++) {
+        for (int i = 1; i < 37; i++) {
             list.add(new Integer(i));
         }
 
         if (value.equals("Арабские цифры")) {
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(list.get(i).toString());
             }
 
@@ -92,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (value.equals("Русские буквы")) {
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(FromDigitsToLetters(list.get(i).toString()));
             }
 
@@ -101,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (value.equals("Римские цифры")) {
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(FromRomansDigitsToLetters(list.get(i).toString()));
             }
 
@@ -110,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (value.equals("Английские буквы")) {
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(FromDigitsToEnglishLetters(list.get(i).toString()));
             }
 
@@ -123,16 +135,16 @@ public class MainActivity extends AppCompatActivity {
         StartTime = System.currentTimeMillis();
     }
 
-    public void onClickRandom5(View view) {
+    public void onClickRandom6(View view) {
         String text = ((Button) view).getText().toString();
 
-        if (value.equals("Арабские цифры") && mixing.equals("Да") && text.equals(Integer.toString(k)) && (k != 25)) {
+        if (value.equals("Арабские цифры") && mixing.equals("Да") && text.equals(Integer.toString(k)) && (k != 36)) {
             list = new ArrayList<>();
-            for (int i = 1; i < 26; i++) {
+            for (int i = 1; i < 37; i++) {
                 list.add(new Integer(i));
             }
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(list.get(i).toString());
             }
         }
@@ -144,13 +156,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        if (value.equals("Русские буквы") && mixing.equals("Да") && text.equals(FromDigitsToLetters(Integer.toString(k))) && (k != 25)) {
+        if (value.equals("Русские буквы") && mixing.equals("Да") && text.equals(FromDigitsToLetters(Integer.toString(k))) && (k != 36)) {
             list = new ArrayList<>();
-            for (int i = 1; i < 26; i++) {
+            for (int i = 1; i < 37; i++) {
                 list.add(new Integer(i));
             }
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(FromDigitsToLetters(list.get(i).toString()));
             }
         }
@@ -161,13 +173,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (value.equals("Римские цифры") && mixing.equals("Да") && text.equals(FromRomansDigitsToLetters(Integer.toString(k))) && (k != 25)) {
+        if (value.equals("Римские цифры") && mixing.equals("Да") && text.equals(FromRomansDigitsToLetters(Integer.toString(k))) && (k != 36)) {
             list = new ArrayList<>();
-            for (int i = 1; i < 26; i++) {
+            for (int i = 1; i < 37; i++) {
                 list.add(new Integer(i));
             }
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(FromRomansDigitsToLetters(list.get(i).toString()));
             }
         }
@@ -178,13 +190,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (value.equals("Английские буквы") && mixing.equals("Да") && text.equals(FromDigitsToEnglishLetters(Integer.toString(k))) && (k != 25)) {
+        if (value.equals("Английские буквы") && mixing.equals("Да") && text.equals(FromDigitsToEnglishLetters(Integer.toString(k))) && (k != 36)) {
             list = new ArrayList<>();
-            for (int i = 1; i < 26; i++) {
+            for (int i = 1; i < 37; i++) {
                 list.add(new Integer(i));
             }
             Collections.shuffle(list);
-            for (int i = 0; i < 25; i++) {
+            for (int i = 0; i < 37; i++) {
                 buttons[i].setText(FromDigitsToEnglishLetters(list.get(i).toString()));
             }
         }
@@ -195,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (k==26) {
+        if (k==37) {
             mChronometer.stop();
             long elapsedTimeMills = System.currentTimeMillis() - StartTime;
             final long sec = elapsedTimeMills / 1000;
@@ -206,7 +218,6 @@ public class MainActivity extends AppCompatActivity {
             k++;
         }
     }
-
     private static String FromDigitsToLetters(String s) {
         String res = "";
         switch (s) {
@@ -284,6 +295,39 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "25":
                 res = "Ч";
+                break;
+            case "26":
+                res = "Ш";
+                break;
+            case "27":
+                res = "Щ";
+                break;
+            case "28":
+                res = "Ъ";
+                break;
+            case "29":
+                res = "Ы";
+                break;
+            case "30":
+                res = "Ь";
+                break;
+            case "31":
+                res = "Э";
+                break;
+            case "32":
+                res = "Ю";
+                break;
+            case "33":
+                res = "Я";
+                break;
+            case "34":
+                res = "а";
+                break;
+            case "35":
+                res = "б";
+                break;
+            case "36":
+                res = "в";
                 break;
         }
         return res;
@@ -367,6 +411,39 @@ public class MainActivity extends AppCompatActivity {
             case "25":
                 res = "Y";
                 break;
+            case "26":
+                res = "Z";
+                break;
+            case "27":
+                res = "a";
+                break;
+            case "28":
+                res = "b";
+                break;
+            case "29":
+                res = "c";
+                break;
+            case "30":
+                res = "d";
+                break;
+            case "31":
+                res = "e";
+                break;
+            case "32":
+                res = "f";
+                break;
+            case "33":
+                res = "g";
+                break;
+            case "34":
+                res = "h";
+                break;
+            case "35":
+                res = "i";
+                break;
+            case "36":
+                res = "j";
+                break;
         }
         return res;
     }
@@ -448,6 +525,39 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "25":
                 res = "XXV";
+                break;
+            case "26":
+                res = "XXVI";
+                break;
+            case "27":
+                res = "XXVII";
+                break;
+            case "28":
+                res = "XXVIII";
+                break;
+            case "29":
+                res = "XXIX";
+                break;
+            case "30":
+                res = "XXX";
+                break;
+            case "31":
+                res = "XXXI";
+                break;
+            case "32":
+                res = "XXXII";
+                break;
+            case "33":
+                res = "XXXIII";
+                break;
+            case "34":
+                res = "XXXIV";
+                break;
+            case "35":
+                res = "XXXV";
+                break;
+            case "36":
+                res = "XXXVI";
                 break;
         }
         return res;
