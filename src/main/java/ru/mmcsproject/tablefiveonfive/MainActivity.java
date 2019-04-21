@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         }
         mTextView.setVisibility(View.VISIBLE);
         mChronometer.setVisibility(View.VISIBLE);
+        mButton.setText("Начать новую игру");
 
         list = new ArrayList<>();
         for (int i = 1; i < 26; i++) {

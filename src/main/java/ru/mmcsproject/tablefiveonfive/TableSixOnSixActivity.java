@@ -87,6 +87,7 @@ public class TableSixOnSixActivity extends AppCompatActivity {
 
         mTextView.setVisibility(View.VISIBLE);
         mChronometer.setVisibility(View.VISIBLE);
+        mButton.setText("Начать новую игру");
 
         list = new ArrayList<>();
         for (int i = 1; i < 37; i++) {
