@@ -476,7 +476,7 @@
         android:layout_marginBottom="16dp"
         android:background="#3F51B5"
         android:onClick="onCLick6"
-        android:text="Коснитесь, чтобы начать игру"
+        android:text="Начать новую игру"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

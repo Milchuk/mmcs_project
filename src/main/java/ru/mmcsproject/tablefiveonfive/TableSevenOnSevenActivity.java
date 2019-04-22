@@ -38,10 +38,6 @@ public class TableSevenOnSevenActivity extends AppCompatActivity {
         Intent intent = getIntent();
         value = intent.getStringExtra("value");
         mixing = intent.getStringExtra("mixing");
-
-    }
-
-    public void onCLick7(View view) {
         k = 1;
         buttons[0] = findViewById(R.id.button);
         buttons[1] = findViewById(R.id.button2);
@@ -103,6 +99,63 @@ public class TableSevenOnSevenActivity extends AppCompatActivity {
         mTextView.setVisibility(View.VISIBLE);
         mChronometer.setVisibility(View.VISIBLE);
         mButton.setText("Начать новую игру");
+
+        list = new ArrayList<>();
+        for (int i = 1; i < 50; i++) {
+            list.add(new Integer(i));
+        }
+
+        if (value.equals("Арабские цифры")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 49; i++) {
+                buttons[i].setText(list.get(i).toString());
+            }
+
+            mTextView.setText("Найдите 1");
+        }
+
+        if (value.equals("Русские буквы")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 49; i++) {
+                buttons[i].setText(FromDigitsToLetters(list.get(i).toString()));
+            }
+
+            mTextView.setText("Найдите А");
+        }
+
+        if (value.equals("Римские цифры")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 49; i++) {
+                buttons[i].setText(FromRomansDigitsToLetters(list.get(i).toString()));
+            }
+
+            mTextView.setText("Найдите I");
+        }
+
+        if (value.equals("Английские буквы")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 49; i++) {
+                buttons[i].setText(FromDigitsToEnglishLetters(list.get(i).toString()));
+            }
+
+            mTextView.setText("Найдите A");
+        }
+
+        mChronometer.setBase(SystemClock.elapsedRealtime());
+        mChronometer.start();
+
+        StartTime = System.currentTimeMillis();
+
+    }
+
+    public void onCLick7(View view) {
+
+        k = 1;
+        mChronometer.setVisibility(View.VISIBLE);
+
+        for (int i = 0; i < 49; i++) {
+            buttons[i].setAllCaps(false);
+        }
 
         list = new ArrayList<>();
         for (int i = 1; i < 50; i++) {

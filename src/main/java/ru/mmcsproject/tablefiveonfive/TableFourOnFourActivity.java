@@ -42,11 +42,84 @@ public class TableFourOnFourActivity extends AppCompatActivity {
         value = intent.getStringExtra("value");
         mixing = intent.getStringExtra("mixing");
 
+        k = 1;
+        buttons[0] = findViewById(R.id.button);
+        buttons[1] = findViewById(R.id.button2);
+        buttons[2] = findViewById(R.id.button3);
+        buttons[3] = findViewById(R.id.button4);
+        buttons[4] = findViewById(R.id.button6);
+        buttons[5] = findViewById(R.id.button7);
+        buttons[6] = findViewById(R.id.button8);
+        buttons[7] = findViewById(R.id.button9);
+        buttons[8] = findViewById(R.id.button11);
+        buttons[9] = findViewById(R.id.button12);
+        buttons[10] = findViewById(R.id.button13);
+        buttons[11] = findViewById(R.id.button14);
+        buttons[12] = findViewById(R.id.button16);
+        buttons[13] = findViewById(R.id.button17);
+        buttons[14] = findViewById(R.id.button18);
+        buttons[15] = findViewById(R.id.button19);
+
+
+        for (int i = 0; i < 16; i++) {
+            buttons[i].setVisibility(View.VISIBLE);
+        }
+        mTextView.setVisibility(View.VISIBLE);
+        mChronometer.setVisibility(View.VISIBLE);
+        mButton.setText("Начать новую игру");
+
+        list = new ArrayList<>();
+        for (int i = 1; i < 17; i++) {
+            list.add(new Integer(i));
+        }
+
+        if (value.equals("Арабские цифры")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 16; i++) {
+                buttons[i].setText(list.get(i).toString());
+            }
+
+            mTextView.setText("Найдите 1");
+        }
+
+        if (value.equals("Русские буквы")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 16; i++) {
+                buttons[i].setText(FromDigitsToLetters(list.get(i).toString()));
+            }
+
+            mTextView.setText("Найдите А");
+        }
+
+        if (value.equals("Римские цифры")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 16; i++) {
+                buttons[i].setText(FromRomansDigitsToLetters(list.get(i).toString()));
+            }
+
+            mTextView.setText("Найдите I");
+        }
+
+        if (value.equals("Английские буквы")) {
+            Collections.shuffle(list);
+            for (int i = 0; i < 16; i++) {
+                buttons[i].setText(FromDigitsToEnglishLetters(list.get(i).toString()));
+            }
+
+            mTextView.setText("Найдите А");
+        }
+
+        mChronometer.setBase(SystemClock.elapsedRealtime());
+        mChronometer.start();
+
+        StartTime = System.currentTimeMillis();
+
     }
 
 
 
     public void onClickRandm4(View view) {
+
         String text = ((Button) view).getText().toString();
 
         if (value.equals("Арабские цифры") && mixing.equals("Да") && text.equals(Integer.toString(k)) && (k != 16)) {
@@ -131,31 +204,9 @@ public class TableFourOnFourActivity extends AppCompatActivity {
     }
 
     public void onClicck4(View view) {
+
         k = 1;
-        buttons[0] = findViewById(R.id.button);
-        buttons[1] = findViewById(R.id.button2);
-        buttons[2] = findViewById(R.id.button3);
-        buttons[3] = findViewById(R.id.button4);
-        buttons[4] = findViewById(R.id.button6);
-        buttons[5] = findViewById(R.id.button7);
-        buttons[6] = findViewById(R.id.button8);
-        buttons[7] = findViewById(R.id.button9);
-        buttons[8] = findViewById(R.id.button11);
-        buttons[9] = findViewById(R.id.button12);
-        buttons[10] = findViewById(R.id.button13);
-        buttons[11] = findViewById(R.id.button14);
-        buttons[12] = findViewById(R.id.button16);
-        buttons[13] = findViewById(R.id.button17);
-        buttons[14] = findViewById(R.id.button18);
-        buttons[15] = findViewById(R.id.button19);
-
-
-        for (int i = 0; i < 16; i++) {
-            buttons[i].setVisibility(View.VISIBLE);
-        }
-        mTextView.setVisibility(View.VISIBLE);
         mChronometer.setVisibility(View.VISIBLE);
-        mButton.setText("Начать новую игру");
 
         list = new ArrayList<>();
         for (int i = 1; i < 17; i++) {
