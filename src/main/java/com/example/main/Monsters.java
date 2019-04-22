@@ -118,7 +118,7 @@ public class Monsters extends AppCompatActivity {
                                             buttons[i].setVisibility(View.INVISIBLE);
                                         }
                                         ImageView iv  = findViewById(R.id.imageView);
-                                        iv.setBackgroundColor(getColor(R.color.red));
+                                        iv.setBackgroundColor(getColor(R.color.green));
                                         //iv.setImageResource(R.drawable.correct);
                                         // iv.setBackgroundResource(R.color.trans);
 
