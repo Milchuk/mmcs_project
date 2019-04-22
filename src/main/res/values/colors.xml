@@ -13,4 +13,7 @@
     <color name="colorHeavyPink">#C71585</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name = "green">#336600</color>
+    <color name = "red">#FF0000</color>
+    <color name="trans">#80000000</color>
 </resources>

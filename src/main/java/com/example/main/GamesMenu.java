@@ -13,8 +13,6 @@ public class GamesMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games_menu);
-        findViewById(R.id.button).setEnabled(false);
-        findViewById(R.id.button3).setEnabled(false);
         findViewById(R.id.button4).setEnabled(false);
 
         Typeface face = Typeface.createFromAsset(this.getAssets(), "fonts/13059.otf");
@@ -32,5 +30,16 @@ public class GamesMenu extends AppCompatActivity {
     public void MosaicOnClick(View view) {
         Intent intent = new Intent(GamesMenu.this, Mosaic.class);
         startActivity(intent);
+    }
+
+    public void MonstersOnClick(View view) {
+        Intent intent2 = new Intent(GamesMenu.this, MonstersModeMenu.class);
+        startActivity(intent2);
+
+    }
+
+    public void TableOnClick(View view) {
+        Intent intent3 = new Intent(GamesMenu.this, TableMenu.class);
+        startActivity(intent3);
     }
 }

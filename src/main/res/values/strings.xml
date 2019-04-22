@@ -1,4 +1,25 @@
 <resources>
-    <string name="app_name">main</string>
+
     <string name="title_activity_games_menu">GamesMenu</string>
+    <string name="app_name">TableFiveOnFive</string>
+
+    <string-array name="choices">
+        <item>Арабские цифры</item>
+        <item>Римские цифры</item>
+        <item>Русские буквы</item>
+        <item>Английские буквы</item>
+    </string-array>
+
+    <string-array name="mixing">
+        <item>Да</item>
+        <item>Нет</item>
+    </string-array>
+
+    <string-array name="sizeoftable">
+        <item>4 X 4</item>
+        <item>5 X 5</item>
+        <item>6 X 6</item>
+        <item>7 X 7</item>
+    </string-array>
+    <string name="n_nmemoryup_n_nversion_1_0_version_code_1_n_n_n_nhttps_vk_com_drkazeev_n_nhttps_github_com_shibarome_mmcs_project">\n\nМузыкальная мозаика: Игрок должен внимательно следить за последовательностью сигналов, а потом воспроизвести\n\nТаблица Шульте: Игрок должен за наименьшее количество времени выстроить последовательный ряд по возрастанию значения. \n\n Весёлые монстры: Игрок должен запомнить таблицу из картинок и после перемешиваниия найти ту, которая заменила одну из старых  \n\nAbout: \n\nПриложение создано в рамках проектной деятельности в институте математики, механики и компьютерных наук им. Воровича ЮФУ.   \n\nMemoryUp - это приложение, позволяющее скоротать время и натренировать свою память.   \n\nversion: 1.0 \n\nversion code: 1  \n\nСвязаться с разработчиками:   \n\nhttps://vk.com/drkazeev  \n\nhttps://github.com/Shibarome/mmcs_project</string>
 </resources>

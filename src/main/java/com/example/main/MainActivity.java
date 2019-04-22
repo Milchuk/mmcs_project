@@ -24,11 +24,15 @@ public class MainActivity extends AppCompatActivity {
         bv4.setTypeface(face);
         bv2.setEnabled(false);
         bv3.setEnabled(false);
-        bv4.setEnabled(false);
     }
 
     public void GamesOnClick(View view) {
         Intent intent = new Intent(MainActivity.this, GamesMenu.class);
+        startActivity(intent);
+    }
+
+    public void RulesOnClick(View view) {
+        Intent intent = new Intent(MainActivity.this, Rules.class);
         startActivity(intent);
     }
 }

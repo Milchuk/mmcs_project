@@ -98,6 +98,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:drawable/menuitem_background"
+        android:onClick="RulesOnClick"
         android:text="Правила"
         android:textColor="@android:color/black"
         android:textSize="36sp"

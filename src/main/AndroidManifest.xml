@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Mosaic"></activity>
+        <activity android:name=".Rules"></activity>
+        <activity android:name=".TableSevenOnSevenActivity" />
+        <activity android:name=".TableSixOnSixActivity" />
+        <activity android:name=".TableFiveOnFiveActivity" />
+        <activity android:name=".TableFourOnFourActivity" />
+        <activity android:name=".TableMenu" />
+        <activity android:name=".Monsters3" />
+        <activity android:name=".Monsters2" />
+        <activity android:name=".Monsters" />
+        <activity android:name=".MonstersModeMenu" />
+        <activity android:name=".Mosaic" />
         <activity android:name=".GamesMenu" />
         <activity android:name=".MainActivity">
             <intent-filter>
