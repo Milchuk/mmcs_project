@@ -1,7 +1,7 @@
 <resources>
 
     <string name="title_activity_games_menu">GamesMenu</string>
-    <string name="app_name">TableFiveOnFive</string>
+    <string name="app_name">Memory Up</string>
 
     <string-array name="choices">
         <item>Арабские цифры</item>
