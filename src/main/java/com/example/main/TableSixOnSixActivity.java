@@ -245,7 +245,7 @@ public class TableSixOnSixActivity extends AppCompatActivity {
                 list.add(new Integer(i));
             }
             Collections.shuffle(list);
-            for (int i = 0; i < 37; i++) {
+            for (int i = 0; i < 36; i++) {
                 buttons[i].setText(FromDigitsToEnglishLetters(list.get(i).toString()));
             }
         }
