@@ -271,6 +271,10 @@ public class Mosaic extends AppCompatActivity {
         ImageButton buttonLB = findViewById(R.id.imageLeftBottomButton);
         ImageButton buttonRB = findViewById(R.id.imageRightBottomButton);
         Button startbutton = findViewById((R.id.EasyStartbutton));
+        buttonLT.setVisibility(View.VISIBLE);
+        buttonRT.setVisibility(View.VISIBLE);
+        buttonLB.setVisibility(View.VISIBLE);
+        buttonRB.setVisibility(View.VISIBLE);
         buttonLT.setBackgroundColor(getResources().getColor(R.color.colorLightPink));
         buttonRT.setBackgroundColor(getResources().getColor(R.color.colorLightGreen));
         buttonLB.setBackgroundColor(getResources().getColor(R.color.colorLightBlue));
