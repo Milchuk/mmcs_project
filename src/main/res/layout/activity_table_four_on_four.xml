@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3D3C41"
     tools:context="com.example.main.TableFourOnFourActivity">
 
     <Chronometer
@@ -27,7 +28,7 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="102dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
